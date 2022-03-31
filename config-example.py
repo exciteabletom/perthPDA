@@ -1,3 +1,5 @@
+# Dates are in "dd/mm/yyyy" format :)
+
 LICENSE_NUMBER = ""
 EXPIRY_DATE = ""
 FIRST_NAME = ""
