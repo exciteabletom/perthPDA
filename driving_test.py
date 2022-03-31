@@ -20,7 +20,7 @@ except ImportError:
     sys.exit(1)
 
 options = Options()
-#options.add_argument("--headless")
+options.add_argument("--headless")
 
 driver = webdriver.Firefox(options=options)
 
