@@ -2,13 +2,18 @@ import signal
 import sys
 from time import sleep
 
+
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
+
+import chromedriver_autoinstaller
+
+chromedriver_autoinstaller.install(cwd=True)
 
 try:
     from config import LICENSE_NUMBER, EXPIRY_DATE, FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, LOCATIONS
@@ -22,7 +27,7 @@ except ImportError:
 options = Options()
 options.add_argument("--headless")
 
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Chrome(options=options)
 
 
 def handler(*args):

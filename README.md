@@ -2,7 +2,7 @@
 Checks the Western Australia Department of Transport website for available Practical Driving Assessment (PDA) bookings.
 
 ## How to use
-1. Install [Firefox](https://www.mozilla.org/firefox/new/) and Selenium (`python -m pip install selenium`)
+1. Install [Chrome](https://www.google.com.au/chrome/) and Selenium (`python -m pip install selenium`)
 1. Copy `config-example.py` to `config.py`
 1. Fill in your personal information in `config.py`
 1. Run the script with `python driving_test.py`
