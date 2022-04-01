@@ -15,7 +15,14 @@ import chromedriver_autoinstaller
 chromedriver_autoinstaller.install(cwd=True)
 
 try:
-    from config import LICENSE_NUMBER, EXPIRY_DATE, FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, LOCATIONS
+    from config import (
+        LICENSE_NUMBER,
+        EXPIRY_DATE,
+        FIRST_NAME,
+        LAST_NAME,
+        DATE_OF_BIRTH,
+        LOCATIONS,
+    )
 except ImportError:
     print(
         "Please copy config-example.py to config.py and add your personal info :)",
