@@ -26,6 +26,7 @@ except ImportError:
 
 options = Options()
 options.add_argument("--headless")
+options.add_argument("--remote-debugging-port=50000")
 
 driver = webdriver.Chrome(options=options)
 
