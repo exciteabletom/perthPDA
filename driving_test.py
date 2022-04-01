@@ -1,7 +1,6 @@
-import signal
+import atexit
 import sys
 from time import sleep
-
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
@@ -26,18 +25,11 @@ except ImportError:
 
 options = Options()
 options.add_argument("--headless")
-options.add_argument("--remote-debugging-port=50000")
 
 driver = webdriver.Chrome(options=options)
 
-
-def handler(*args):
-    driver.close()
-    sys.exit(0)
-
-
-signal.signal(signal.SIGINT, handler)
-signal.signal(signal.SIGTERM, handler)
+# Kill driver when script exits
+atexit.register(driver.quit)
 
 wait = WebDriverWait(driver, 5)
 
@@ -96,8 +88,6 @@ def main():
             print(f"Booking available at: {location}")
         except NoSuchElementException:
             pass
-
-    driver.close()
 
 
 main()
