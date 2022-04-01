@@ -3,3 +3,4 @@ config.py
 .idea/
 __pycache__/
 geckodriver.log 
+*/chromedriver
