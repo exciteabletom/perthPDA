@@ -1,4 +1,6 @@
+# This tool no longer works, the DOT has added a captcha to the booking site :( 
 # perthPDA
+
 Checks the Western Australia Department of Transport website for available Practical Driving Assessment (PDA) bookings.
 
 ## How to use
